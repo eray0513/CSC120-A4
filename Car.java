@@ -75,10 +75,21 @@ public class Car {
         return sucessful;
     }
 
+    /**
+     * Prints out a list of the passenger names in the car
+     */
     public void printManifest(){
-        if(this.onboard.get(0)!= null){
+        boolean empty = true;
+        for(int j = 0; j<onboard.size(); j++){
+            if(onboard.get(j)!= null){
+                empty = false;
+                break;
+            }
+        }
+        if(!empty){
             for(int j = 0; j < this.onboard.size(); j++){
-                System.out.println(this.onboard.get(j));
+                String current = this.onboard.get(j).getName();
+                System.out.println(current);
             }
         }
         else{
