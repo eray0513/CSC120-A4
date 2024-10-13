@@ -17,7 +17,7 @@ public class Car {
 
     /**
      * Allows the max capacity to be accessed outside the class
-     * @return
+     * @return maxCapacity
      */
     public int getCapacity(){
         return this.maxCapacity;
@@ -27,17 +27,16 @@ public class Car {
      * Allows the seats remaining to be accessed outside the class
      * @return
      */
-    public int getRemaining(){
-        int seatsTaken = 0; // Keeps track of seats that aren't null
+    public int seatsRemaining(){
+        int seatsRemaining = 0; // Keeps track of seats that aren't null
         for(int i = 0; i< this.onboard.size(); i++){ // for every space in the array list
             if(onboard.get(i) != null){ // if the seat is taken
-                seatsTaken ++;
-            }
-            else{
+                seatsRemaining ++;
+            }else{
                 break;
             }
         }
-        return this.maxCapacity - seatsTaken;
+        return this.maxCapacity - seatsRemaining;
     }
 
     /**
@@ -47,16 +46,27 @@ public class Car {
      */
     public boolean addPassenger(Passenger adding){
         boolean sucess = false;
-        if(this.getRemaining() > 0){
-            int nextAvailable = maxCapacity-this.getRemaining();
+        boolean alreadyOnboard = false;
+        for(int i = 0; i<this.onboard.size(); i++){
+            if(this.onboard.get(i)==adding){
+                alreadyOnboard = true;
+                break;
+            }
+        }
+        if(!alreadyOnboard){
+            if(this.seatsRemaining() > 0){
+            int nextAvailable = maxCapacity-this.seatsRemaining();
             this.onboard.add(nextAvailable, adding);
             sucess = true;
             return sucess;
-        }
-        else{
+            }else{
             return sucess;
+            }
+        }else{
+            return false;
         }
     }
+
 
     /**
      * Allows the car to remove a passenger if that passenger exists within the car

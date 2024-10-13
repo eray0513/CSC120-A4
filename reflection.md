@@ -2,3 +2,5 @@ Use this file to record your reflection on this assignment.
 
 - What are your initial impressions of how `Encapsulation` affects your programming?
 - What worked, what didn't, what advice would you give someone taking this course in the future?
+
+My initial impressions are that there is a lot of overlap because of encapsulation. We have methods in separate classes that do nearly the same thing, but both are necessary because the functions of those methods impact both classes (ie. boarding methods). Additionally, I enjoy the separation of classes because I know exactly what each class needs to do, but I find their interactions a bit confusing sometimes. However, I feel I started to understand it better with this project. What worked was taking it slow and building up to the more complicated parts. What didn't was attempting to do it all at once and not taking any breaks or stepping back to look at the overall every once in a while. I would say to go to office hours, talk to people in your class, and to read everything you are given before you begin (also to hit save on your reflection and to make sure you turn it in with your assignment).
