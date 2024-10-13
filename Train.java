@@ -57,7 +57,7 @@ public class Train {
     public int getAvailableSeats(){
         int avail = 0;
         for(int e = 0; e<this.cars.size(); e++){
-            avail += this.cars.get(e).getRemaining();
+            avail += this.cars.get(e).seatsRemaining();
         }
         return avail;
     }

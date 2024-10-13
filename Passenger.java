@@ -37,7 +37,7 @@ public class Passenger {
      * Allows a passenger to exit a car and prints if it was sucessful
      * @param exiting
      */
-    public void exitCar(Car exiting){
+    public void getOffCar(Car exiting){
         boolean sucessful = exiting.removePassenger(this);
         if(sucessful){
             System.out.println("The passenger has exited the car.");

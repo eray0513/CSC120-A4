@@ -46,13 +46,7 @@ public class Car {
      */
     public boolean addPassenger(Passenger adding){
         boolean sucess = false;
-        boolean alreadyOnboard = false;
-        for(int i = 0; i<this.onboard.size(); i++){
-            if(this.onboard.get(i)==adding){
-                alreadyOnboard = true;
-                break;
-            }
-        }
+        boolean alreadyOnboard = this.onboard.contains(adding);
         if(!alreadyOnboard){
             if(this.seatsRemaining() > 0){
             int nextAvailable = maxCapacity-this.seatsRemaining();
@@ -75,12 +69,10 @@ public class Car {
      */
     public boolean removePassenger(Passenger removing){
         boolean sucessful = false;
-        for(int s = 0; s<this.onboard.size(); s++){
-            if(this.onboard.get(s)==removing){
-                sucessful = true;
-                this.onboard.remove(s);
-                return sucessful;
-            }
+        if(this.onboard.contains(removing)){
+            sucessful = true;
+            this.onboard.remove(removing);
+            return sucessful;
         }
         return sucessful;
     }

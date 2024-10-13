@@ -84,6 +84,7 @@ public class Engine {
         Car myCar = new Car(10);
         // test add and remove and print manifest methods
         myCar.addPassenger(myPassenger);
+        System.out.println(myCar.addPassenger(myPassenger));
         myCar.addPassenger(myPassenger2);
         myCar.printManifest();
         myCar.removePassenger(myPassenger);
@@ -97,9 +98,9 @@ public class Engine {
         myCar2.addPassenger(myPassenger3);
         System.out.println(myCar2.addPassenger(myPassenger3));
         System.out.println(myCar2.addPassenger(myPassenger));
-        myPassenger3.exitCar(myCar2);
-        myPassenger3.exitCar(myCar2);
-        myPassenger3.exitCar(myCar2);
+        myPassenger3.getOffCar(myCar2);
+        myPassenger3.getOffCar(myCar2);
+        myPassenger3.getOffCar(myCar2);
         myPassenger2.boardCar(myCar2);
         myPassenger3.boardCar(myCar2);
         myPassenger.boardCar(myCar2);
