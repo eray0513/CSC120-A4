@@ -8,7 +8,7 @@ public class Car {
 
     /**
      * Constructors a car object
-     * @param maxCap
+     * @param maxCap max amt of passengers
      */
     public Car(int maxCap){
         this.maxCapacity = maxCap;
@@ -17,7 +17,7 @@ public class Car {
 
     /**
      * Allows the max capacity to be accessed outside the class
-     * @return maxCapacity
+     * @return int for maxCapacity
      */
     public int getCapacity(){
         return this.maxCapacity;
@@ -25,7 +25,7 @@ public class Car {
 
     /**
      * Allows the seats remaining to be accessed outside the class
-     * @return
+     * @return int for number of seats remaining open
      */
     public int seatsRemaining(){
         int seatsRemaining = 0; // Keeps track of seats that aren't null
@@ -41,8 +41,8 @@ public class Car {
 
     /**
      * Adds a passenger if there is available space in the car
-     * @param adding
-     * @return if it was sucessful
+     * @param adding passenger being added
+     * @return t/f if it was sucessful
      */
     public boolean addPassenger(Passenger adding){
         boolean sucess = false;
@@ -64,8 +64,8 @@ public class Car {
 
     /**
      * Allows the car to remove a passenger if that passenger exists within the car
-     * @param removing
-     * @return whether the action was completed
+     * @param removing passenger being removed
+     * @return t/f whether the action was completed
      */
     public boolean removePassenger(Passenger removing){
         boolean sucessful = false;
@@ -93,8 +93,7 @@ public class Car {
                 String current = this.onboard.get(j).getName();
                 System.out.println(current);
             }
-        }
-        else{
+        }else{
             System.out.println("This car is empty.");
         }
     }

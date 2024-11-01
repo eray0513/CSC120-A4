@@ -7,9 +7,8 @@ public class Engine {
 
     /**
      * Constructs an engine object
-     * @param fuel
-     * @param max
-     * @param current
+     * @param fuel type
+     * @param max fuel amt
      */
     public Engine(FuelType fuel, double max){
         this.fuel = fuel;
@@ -27,7 +26,7 @@ public class Engine {
 
     /**
      * Allows max fuel capacity to be accessed outside the engine class
-     * @return max fuel
+     * @return double for max fuel
      */
     public double getMax(){
         return maxFuel;
@@ -35,7 +34,7 @@ public class Engine {
 
     /**
      * Allows current fuel to be accessed outside the engine class
-     * @return current fuel
+     * @return double for current fuel
      */
     public double getCurrent(){
         return currentFuel;
@@ -48,6 +47,10 @@ public class Engine {
         this.currentFuel = maxFuel;
     }
 
+    /**
+     * Allows the train to go if it has enough fuel
+     * @return t/f if there is fuel remaining after the train goes
+     */
     public boolean go(){
         boolean notEmpty = true; // returned to notify the user if their is fuel remaining
         // If current fuel is greater than the amt decreasing

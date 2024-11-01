@@ -7,10 +7,10 @@ public class Train {
 
     /**
      * Constructs a train object with an initialized engine and an array list of cars that are initialzied
-     * @param fuelType
-     * @param fuelCapacity
-     * @param nCars
-     * @param passengerCapacity
+     * @param fuelType type of fuel
+     * @param fuelCapacity amt of fuel 
+     * @param nCars number of cars
+     * @param passengerCapacity amt of passengers
      */
     public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity){
         this.engine = new Engine(fuelType, fuelCapacity);
@@ -23,7 +23,7 @@ public class Train {
 
     /**
      * Allows the train's engine to be accessed outside the class
-     * @return
+     * @return Engine object
      */
     public Engine getEngine(){
         return this.engine;
@@ -31,8 +31,8 @@ public class Train {
 
     /**
      * Allows a certain number car to be accessed outside the class, subtract 1 to account for index
-     * @param i
-     * @return
+     * @param i car number
+     * @return Car object at i-1
      */
     public Car getCar(int i){
         return cars.get(i-1);
@@ -40,7 +40,7 @@ public class Train {
 
     /**
      * Iterates through the cars array list and adds up the max capacities
-     * @return
+     * @return int for max capacity of all cars
      */
     public int getMaxCapacity(){
         int maxCap = 0;
@@ -52,7 +52,7 @@ public class Train {
 
     /**
      * Iterates through the car array list and adds up the remaining available seats
-     * @return
+     * @return int for number of available seats
      */
     public int getAvailableSeats(){
         int avail = 0;
